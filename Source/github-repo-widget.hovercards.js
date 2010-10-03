@@ -16,31 +16,32 @@ provides: [GithubRepoWidget.hoverCards]
 ...
 */
 
-GithubRepoWidget.hoverCards = function(options){
-	options = options || {}
+GithubRepoWidget.hoverCards = function(hoverCardOptions, positionOptions){
+	hoverCardOptions = hoverCardOptions || {};
+	positionOptions = positionOptions || {};
 	var cards = [];
 	$$('a[href^="http://github.com"]').each(function(a){
 		var chunks = a.get('href').split('/');
 		var user = chunks[3];
 		var repo = chunks[4];
-		if(user && repo)
-		{
-			var card = new GithubRepoWidget(user, repo).addEvent('complete', function(response, container){
+		if(user && repo){
+			var card = new GithubRepoWidget(user, repo, hoverCardOptions);
+			card.addEvent('complete', function(response, container){
 				container.setStyle('display','none');
 				$(document.body).grab(container);
 				container.addEvent('mouseleave', function(){
 					container.setStyle('display', 'none');
-				})
+				});
 				a.addEvent('mouseenter', function(){
 					container.position($merge({
-						'relativeTo': a,
-						'position': 'bottomLeft'
-					}, options));
+						relativeTo: a,
+						position: 'bottomLeft'
+					}, positionOptions));
 					container.setStyle('display', 'block');
 				});
 			});
+			cards.push(card);
 		}
-		cards.push(card);
 	});
 	return cards;
 };
