@@ -1,5 +1,7 @@
 /*
 ---
+script: github-repo-widget.js
+
 description: Github repo widget, fetches repo information from github and displays it
 
 license: MIT-style
@@ -11,7 +13,7 @@ requires:
 - more/1.2.4.4: [Request.JSONP]
 
 provides: [GithubRepoWidget]
----
+...
 */
 
 var GithubRepoWidget = new Class({

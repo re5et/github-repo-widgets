@@ -1,5 +1,7 @@
 /*
 ---
+script: github-repo-widget.hovercards.js
+
 description: Github repo widget hovercards.  Automatically finds github repo links and applies a github repo widget hovercard to the link
 
 license: MIT-style
@@ -11,7 +13,7 @@ requires:
 - more/1.2.4.4: [Element.Position]
 
 provides: [GithubRepoWidget.hoverCards]
----
+...
 */
 
 GithubRepoWidget.hoverCards = function(){
