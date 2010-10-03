@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Github Repo Widget demo</title>
+	<script src="assets/js/mootools.js"></script>
+	<script src="assets/js/mootools-more.js"></script>
+	<script src="../Source/github-repo-widget.js"></script>
+	<script src="../Source/github-repo-widget.hovercards.js"></script>
+	<script>
+	    window.addEvent('domready', function(){
+	        GithubRepoWidget.hoverCards();
+		new GithubRepoWidget('re5et', 'github-repo-widgets', {
+		    'injectInto': $('widget')
+		})
+	    })
+	</script>
+	<link rel="stylesheet" href="assets/css/grw.css" type="text/css" media="screen" />
+    </head>
+    <body>
+	<h1>This is a demonstration of <a href="http://github.com/re5et/github-repo-widgets">GithubRepoWidgets</a></h1>
+	<h2>Below is a hovercard that loaded when the page did.</h2>
+	<div id="widget"></div>
+	<h2>Hover these links for a demo of the hovercards feature.</h2>
+	<a href="http://github.com/rails/rails">here</a>
+	<a href="http://github.com/sinatra/sinatra">are</a>
+	<a href="http://github.com/mootools/mootools-core">some</a>
+	<a href="http://github.com/mootools/mootools-more">linked</a>
+	<a href="http://github.com/technomancy/emacs-starter-kit">repos</a>.
+    </body>
+</html>
