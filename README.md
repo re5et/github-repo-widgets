@@ -3,7 +3,7 @@ Github Repo Widgets
 
 Github Repo Widgets is a MooTools plugin that allows you to fetch information regarding a Github repository using a JSONP request, and builds an HTML widget for you.
 
-![Screenshot](http://re5et.github.com/projects/github-repo-widget/assets/images/github-repo-widget-screenshot.png)
+![Screenshot](http://re5et.github.com/projects/github-repo-widgets/assets/images/github-repo-widget-screenshot.png)
 
 How to use
 ----------
