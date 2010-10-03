@@ -17,10 +17,10 @@ You can use GithubRepoWidget to create a widget by doing the following:
 
 or you can supply an element to inject into and have the complete event handled for you:
 
-   var myRepoWidget = new GithubRepoWidget('re5et', '.dotfiles', {
-       'injectInto': $('myElement')
-   });
+    var myRepoWidget = new GithubRepoWidget('re5et', '.dotfiles', {
+        'injectInto': $('myElement')
+    });
 
 You can also use hoverCards, which will automatically find github repo links and attach hovercards to them, by running:
 
-   GithubRepoWidget.hovercards()
+    GithubRepoWidget.hovercards()
