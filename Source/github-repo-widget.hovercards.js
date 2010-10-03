@@ -16,7 +16,11 @@ provides: [GithubRepoWidget.hoverCards]
 ...
 */
 
-GithubRepoWidget.hoverCards = function(){
+GithubRepoWidget.hoverCards = function(position){
+    position = position || {
+	'x': 'left',
+	'y': 'bottom'
+    };
     var cards = [];
     $$('a[href^="http://github.com"]').each(function(a){
 	var chunks = a.get('href').split('/');
@@ -33,7 +37,7 @@ GithubRepoWidget.hoverCards = function(){
 		a.addEvent('mouseenter', function(){
 		    container.position({
 	    		'relativeTo': a,
-	    		'position': 'upperleft'
+	    		'position': position
 		    });
 	    	    container.setStyle('display', 'block');
 		});
