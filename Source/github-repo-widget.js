@@ -9,8 +9,8 @@ license: MIT-style
 authors: [atom smith]
 
 requires:
-- core/1.2.4: [Class.Extras, Element.Event, Element.Style, Selectors]
-- more/1.2.4.4: [Request.JSONP]
+- core/1.3: [Class.Extras, Element.Event, Element.Style, Selectors]
+- more/1.3.0.1rc1: [Request.JSONP]
 
 provides: [GithubRepoWidget]
 ...

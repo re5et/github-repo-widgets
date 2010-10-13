@@ -10,7 +10,7 @@ authors: [atom smith]
 
 requires:
 - GithubRepoWidget
-- more/1.2.4.4: [Element.Position]
+- more/ 1.3.0.1rc1: [Element.Position]
 
 provides: [GithubRepoWidget.hoverCards]
 ...
